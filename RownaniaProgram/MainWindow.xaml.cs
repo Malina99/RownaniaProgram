@@ -397,8 +397,8 @@ namespace RownaniaProgram
 
         private void liczBtn_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            // {
+            try
+            {
             string operation = rownanieTextBox.Text;
             string temp;
             string x = ZnajdzX(operation, operation.IndexOf('x'), ref startIndex, ref endIndex, sep);
@@ -439,11 +439,11 @@ namespace RownaniaProgram
             }
 
             wynikLab.Content = wynik;
-            //  }
-            //  catch
-            // {
-            //     MessageBox.Show("Błąd zapisu!");
-            // }
+            }
+            catch
+            {
+                MessageBox.Show("Błąd zapisu!");
+            }
 
 
 
