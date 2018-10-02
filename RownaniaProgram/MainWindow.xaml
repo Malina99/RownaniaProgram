@@ -1,0 +1,15 @@
+﻿<Window x:Class="RownaniaProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RownaniaProgram"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="liczBtn" Content="OBLICZ&#xD;&#xA;" Margin="215,160,245,193" FontFamily="Arial" FontSize="48" Click="liczBtn_Click"/>
+        <TextBox x:Name="rownanieTextBox" Margin="121,30,121,333" TextWrapping="Wrap" Text="2x+2=3" FontFamily="Arial" FontSize="48" TextAlignment="Center" />
+        <Label x:Name="wynikLab" Content="WYNIK" Margin="269,254,279,46" FontFamily="Arial" FontSize="72"/>
+
+    </Grid>
+</Window>

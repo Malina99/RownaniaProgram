@@ -1,0 +1,15 @@
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\bin\Debug\RownaniaProgram.exe.config
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\bin\Debug\RownaniaProgram.exe
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\bin\Debug\RownaniaProgram.pdb
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.csprojAssemblyReference.cache
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\MainWindow.g.cs
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\App.g.cs
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram_MarkupCompile.cache
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram_MarkupCompile.lref
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\MainWindow.baml
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.g.resources
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.Properties.Resources.resources
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.csproj.GenerateResource.cache
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.csproj.CoreCompileInputs.cache
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.exe
+C:\Users\lolix\source\repos\RownaniaProgram\RownaniaProgram\obj\Debug\RownaniaProgram.pdb
