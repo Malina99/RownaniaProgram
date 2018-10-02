@@ -5,11 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RownaniaProgram"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="334.034" Width="714.286">
     <Grid>
-        <Button x:Name="liczBtn" Content="OBLICZ&#xD;&#xA;" Margin="215,160,245,193" FontFamily="Arial" FontSize="48" Click="liczBtn_Click"/>
-        <TextBox x:Name="rownanieTextBox" Margin="121,30,121,333" TextWrapping="Wrap" Text="2x+2=3" FontFamily="Arial" FontSize="48" TextAlignment="Center" />
-        <Label x:Name="wynikLab" Content="WYNIK" Margin="269,254,279,46" FontFamily="Arial" FontSize="72"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="437*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="liczBtn" Content="OBLICZ&#xD;&#xA;" Margin="120,77,5,0" FontFamily="Arial" FontSize="48" Click="liczBtn_Click" Grid.Column="2" Height="64" VerticalAlignment="Top"/>
+        <TextBox x:Name="rownanieTextBox" Margin="10,77,0,0" TextWrapping="Wrap" Text="2x+2=3" FontFamily="Arial" FontSize="48" TextAlignment="Center" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="502" Height="64" VerticalAlignment="Top" />
+        <Label x:Name="wynikLab" Content="WYNIK" Margin="10,161,194,0" FontFamily="Arial" FontSize="72" Grid.ColumnSpan="3" Height="99" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

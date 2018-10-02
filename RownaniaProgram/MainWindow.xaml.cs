@@ -117,10 +117,19 @@ namespace RownaniaProgram
             {
                 wynik = operation.Substring(end, operation.IndexOf('x') - end);
             }
-            if (wynik[0] == '/' || wynik[0] == '*')
+            try
             {
-                wynik = wynik.Substring(1);
+                if (wynik[0] == '/' || wynik[0] == '*')
+                {
+                    wynik = wynik.Substring(1);
+                }
             }
+            catch
+            {
+                wynik = "1";
+            }
+
+
             return wynik;
         }
 
@@ -177,7 +186,16 @@ namespace RownaniaProgram
                             tempZnak = item;
                         }
                     }
-                    double a = Convert.ToDouble(IloscX(sep, operation));
+                    double a;
+                    try
+                    {
+                        a = Convert.ToDouble(IloscX(sep, operation));
+                    }
+                    catch
+                    {
+                        a = 1;
+                    }
+                    
                     double b = Convert.ToDouble(tempString);
                     x = Convert.ToString(a * b) + "x";
                     string xtemp = ZnajdzX(operation, operation.IndexOf('x'), ref startIndex, ref endIndex, sep);
@@ -225,7 +243,17 @@ namespace RownaniaProgram
                         tempIndex = operation.Length;
                     }
                     tempString = operation.Substring(za, tempIndex - za);
-                    x = Convert.ToString(Convert.ToDouble(IloscX(sep, operation)) * Convert.ToDouble(tempString)) + "x";
+                    double a;
+                    try
+                    {
+                        a = Convert.ToDouble(IloscX(sep, operation));
+                    }
+                    catch
+                    {
+                        a = 1;
+                    }
+                    double b = Convert.ToDouble(tempString);
+                    x = Convert.ToString(a * b) + "x";
                     operation = operation.Substring(0, startIndex) + x + operation.Substring(tempIndex);
                     tempIndex = 0;
 
@@ -298,7 +326,7 @@ namespace RownaniaProgram
                     }
                     double a = Convert.ToDouble(IloscX(sep, operation));
                     double b = Convert.ToDouble(tempString);
-                    x = Convert.ToString(b/a) + "x";
+                    x = Convert.ToString(b / a) + "x";
                     string xtemp = ZnajdzX(operation, operation.IndexOf('x'), ref startIndex, ref endIndex, sep);
                     operation = operation.Substring(0, tempIndex) + tempZnak + x + operation.Substring(endIndex);
                     tempIndex = 0;
@@ -369,11 +397,18 @@ namespace RownaniaProgram
 
         private void liczBtn_Click(object sender, RoutedEventArgs e)
         {
+            //try
+            // {
             string operation = rownanieTextBox.Text;
             string temp;
             string x = ZnajdzX(operation, operation.IndexOf('x'), ref startIndex, ref endIndex, sep);
+
             operation = MnozenieX(operation, sep);
+
             operation = DzielenieX(operation, sep);
+
+
+
 
             x = ZnajdzX(operation, operation.IndexOf('x'), ref startIndex, ref endIndex, sep);
             temp = operation.Substring(0, startIndex) + operation.Substring(endIndex);
@@ -382,15 +417,34 @@ namespace RownaniaProgram
             string iloscX = IloscX(sep, operation);
             DataTable dt = new DataTable();
             var result = dt.Compute(lewa, "");
+            if (result == DBNull.Value)
+            {
+                result = 0;
+            }
             var result2 = dt.Compute(prawa, "");
+            if (result2 == DBNull.Value)
+            {
+                result2 = 0;
+            }
             temp = Convert.ToString((Convert.ToDouble(result2) - Convert.ToDouble(result)));
             string wynik = x + " = " + temp;
-            if (iloscX != "")
+            try
             {
                 temp = Convert.ToString(Convert.ToDouble(temp) / (Convert.ToDouble(iloscX)));
                 wynik = "x = " + temp;
             }
+            catch
+            {
+                wynik = "x = " + temp;
+            }
+
             wynikLab.Content = wynik;
+            //  }
+            //  catch
+            // {
+            //     MessageBox.Show("Błąd zapisu!");
+            // }
+
 
 
 
